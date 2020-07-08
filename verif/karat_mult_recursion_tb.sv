@@ -73,8 +73,7 @@ initial begin
                 $error("ERROR: oO != oO_ref!");
                 $finish;    
             end
-            iX = $urandom();
-            iY = $urandom();
+            std::randomize(iX, iY);
         end
         #(CLK_PERIOD/2);
     end

@@ -41,8 +41,7 @@ assign  oO_ref = iX * iY;
 
 initial begin
     forever begin
-        iX = $urandom();
-        iY = $urandom();
+        std::randomize(iX, iY);
         #CLK_PERIOD;
         assert (oO == oO_ref) 
         else
